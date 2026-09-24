@@ -23,10 +23,6 @@ export function ParticlesBackground() {
   };
 
   const options: ISourceOptions = useMemo(() => {
-    const isDark = resolvedTheme === "dark";
-    const color = isDark ? "#38bdf8" : "#0ea5e9";
-    const linksColor = isDark ? "#bae6fd" : "#7dd3fc";
-
     return {
       background: {
         color: {
@@ -47,7 +43,7 @@ export function ParticlesBackground() {
         },
         modes: {
           push: {
-            quantity: 4,
+            quantity: 3,
           },
           repulse: {
             distance: 100,
@@ -57,13 +53,13 @@ export function ParticlesBackground() {
       },
       particles: {
         color: {
-          value: color,
+          value: "#FF6B00",
         },
         links: {
-          color: linksColor,
-          distance: 150,
+          color: "#FF8A00",
+          distance: 140,
           enable: true,
-          opacity: 0.3,
+          opacity: 0.18,
           width: 1,
         },
         move: {
@@ -73,7 +69,7 @@ export function ParticlesBackground() {
             default: "bounce",
           },
           random: false,
-          speed: 1,
+          speed: 0.8,
           straight: false,
         },
         number: {
@@ -82,21 +78,21 @@ export function ParticlesBackground() {
             width: 800,
             height: 800,
           },
-          value: 40,
+          value: 36,
         },
         opacity: {
-          value: 0.5,
+          value: 0.4,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 1, max: 2.5 },
         },
       },
       detectRetina: true,
     };
-  }, [resolvedTheme]);
+  }, []);
 
   if (!init) {
     return null;

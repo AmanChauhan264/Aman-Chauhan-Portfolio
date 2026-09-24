@@ -50,7 +50,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-950/80 backdrop-blur-md border-b border-white/10 py-3 shadow-2xl shadow-cyan-950/20"
+          ? "bg-[#080808]/90 backdrop-blur-md border-b border-[#292929] py-3 shadow-2xl shadow-black/80"
           : "bg-transparent py-5"
       }`}
     >
@@ -58,27 +58,27 @@ export function Navbar() {
         {/* Brand Logo */}
         <a
           href="#home"
-          className="flex items-center space-x-2 group focus:outline-none"
+          className="flex items-center space-x-2.5 group focus:outline-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-shadow">
-            <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-              <span className="font-mono font-bold text-lg text-cyan-400 group-hover:text-cyan-300 transition-colors">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#FF6B00] to-[#FF8A00] p-0.5 shadow-lg shadow-[#FF6B00]/25 group-hover:shadow-[#FF6B00]/50 transition-shadow">
+            <div className="w-full h-full bg-[#080808] rounded-[10px] flex items-center justify-center">
+              <span className="font-mono font-bold text-lg text-[#FF6B00] group-hover:text-[#FF8A00] transition-colors">
                 AM
               </span>
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-heading font-extrabold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors leading-none">
+            <span className="font-heading font-extrabold text-lg tracking-tight text-[#F5F5F5] group-hover:text-[#FF6B00] transition-colors leading-none">
               AMAN
             </span>
-            <span className="text-[10px] font-mono text-cyan-400 tracking-widest leading-none mt-1">
-              FULL-STACK
+            <span className="text-[9.5px] font-mono text-[#FF8A00] tracking-widest leading-none mt-1 font-semibold">
+              MERN STACK
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center space-x-1 bg-slate-900/60 border border-white/10 px-4 py-1.5 rounded-full backdrop-blur-md">
+        <nav className="hidden lg:flex items-center space-x-1 bg-[#111111]/80 border border-[#292929] px-4 py-1.5 rounded-full backdrop-blur-md shadow-inner">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
@@ -87,8 +87,8 @@ export function Navbar() {
                 href={link.href}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
                   isActive
-                    ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/20 font-semibold"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    ? "bg-[#FF6B00]/15 text-[#FF8A00] border border-[#FF6B00]/40 shadow-sm shadow-[#FF6B00]/20 font-semibold"
+                    : "text-[#A3A3A3] hover:text-[#F5F5F5] hover:bg-white/5"
                 }`}
               >
                 {link.name}
@@ -103,7 +103,7 @@ export function Navbar() {
             href="https://github.com/AmanChauhan264"
             target="_blank"
             rel="noreferrer"
-            className="p-2 rounded-xl text-slate-400 hover:text-cyan-400 hover:bg-slate-900 border border-transparent hover:border-slate-800 transition-all"
+            className="p-2 rounded-xl text-[#A3A3A3] hover:text-[#FF6B00] hover:bg-[#151515] border border-transparent hover:border-[#292929] transition-all"
             aria-label="GitHub Profile"
           >
             <GithubIcon size={19} />
@@ -112,7 +112,7 @@ export function Navbar() {
             href="https://linkedin.com/in/aman-kumar-chauhan"
             target="_blank"
             rel="noreferrer"
-            className="p-2 rounded-xl text-slate-400 hover:text-cyan-400 hover:bg-slate-900 border border-transparent hover:border-slate-800 transition-all"
+            className="p-2 rounded-xl text-[#A3A3A3] hover:text-[#FF6B00] hover:bg-[#151515] border border-transparent hover:border-[#292929] transition-all"
             aria-label="LinkedIn Profile"
           >
             <LinkedinIcon size={19} />
@@ -120,7 +120,7 @@ export function Navbar() {
           <a
             href="/resume.pdf"
             download="Aman_Kumar_Chauhan_Resume.pdf"
-            className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-semibold text-xs px-4 py-2 rounded-xl transition-all shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5"
+            className="flex items-center space-x-2 bg-gradient-to-r from-[#FF6B00] to-[#FF8A00] hover:from-[#FF8A00] hover:to-[#FFB066] text-[#080808] font-bold text-xs px-4 py-2 rounded-xl transition-all shadow-md shadow-[#FF6B00]/20 hover:shadow-[#FF6B00]/40 hover:-translate-y-0.5"
           >
             <FileText size={15} />
             <span>Resume</span>
@@ -132,14 +132,14 @@ export function Navbar() {
           <a
             href="/resume.pdf"
             download="Aman_Kumar_Chauhan_Resume.pdf"
-            className="md:hidden flex items-center space-x-1.5 bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs px-3 py-1.5 rounded-lg font-medium"
+            className="md:hidden flex items-center space-x-1.5 bg-[#FF6B00]/15 text-[#FF8A00] border border-[#FF6B00]/30 text-xs px-3 py-1.5 rounded-lg font-medium"
           >
             <FileText size={14} />
             <span>CV</span>
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-cyan-400 transition-colors"
+            className="p-2 rounded-xl bg-[#151515] border border-[#292929] text-[#F5F5F5] hover:text-[#FF6B00] transition-colors cursor-pointer"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -149,7 +149,7 @@ export function Navbar() {
 
       {/* Mobile Nav Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 px-6 py-6 mt-2 shadow-2xl flex flex-col space-y-3 animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden bg-[#080808]/98 backdrop-blur-xl border-b border-[#292929] px-6 py-6 mt-2 shadow-2xl flex flex-col space-y-3 animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="grid grid-cols-2 gap-2">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
@@ -160,8 +160,8 @@ export function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
                     isActive
-                      ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-semibold"
-                      : "text-slate-300 hover:bg-slate-900"
+                      ? "bg-[#FF6B00]/15 text-[#FF8A00] border border-[#FF6B00]/40 font-semibold"
+                      : "text-[#A3A3A3] hover:text-[#F5F5F5] hover:bg-[#151515]"
                   }`}
                 >
                   {link.name}
@@ -170,13 +170,13 @@ export function Navbar() {
             })}
           </div>
 
-          <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div className="pt-4 border-t border-[#292929] flex items-center justify-between">
             <div className="flex space-x-3">
               <a
                 href="https://github.com/AmanChauhan264"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800"
+                className="p-2.5 rounded-xl bg-[#151515] text-[#A3A3A3] hover:text-[#FF6B00] border border-[#292929]"
               >
                 <GithubIcon size={20} />
               </a>
@@ -184,7 +184,7 @@ export function Navbar() {
                 href="https://linkedin.com/in/aman-kumar-chauhan"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 text-slate-300 hover:text-cyan-400 border border-slate-800"
+                className="p-2.5 rounded-xl bg-[#151515] text-[#A3A3A3] hover:text-[#FF6B00] border border-[#292929]"
               >
                 <LinkedinIcon size={20} />
               </a>
@@ -193,7 +193,7 @@ export function Navbar() {
               href="/resume.pdf"
               download="Aman_Kumar_Chauhan_Resume.pdf"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-cyan-500/20"
+              className="flex items-center space-x-2 bg-gradient-to-r from-[#FF6B00] to-[#FF8A00] text-[#080808] font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-[#FF6B00]/25"
             >
               <FileText size={16} />
               <span>Download Resume</span>

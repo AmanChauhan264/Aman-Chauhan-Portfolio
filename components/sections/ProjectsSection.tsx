@@ -13,8 +13,8 @@ export function ProjectsSection() {
       tags: ["React.js", "Node.js", "Tailwind CSS", "JavaScript"],
       category: "Full-Stack Web App",
       github: "https://github.com/AmanChauhan264",
-      gradient: "from-cyan-600/30 to-blue-900/40",
-      accent: "text-cyan-400 border-cyan-500/30",
+      gradient: "from-[#241306] to-[#151515]",
+      accent: "text-[#FF8A00] border-[#FF6B00]/40",
       codeSnippet: "// Shopping Cart State\nconst [cart, setCart] = useState<CartItem[]>([]);\nconst addToCart = (product) => {\n  setCart(prev => [...prev, product]);\n};"
     },
     {
@@ -23,8 +23,8 @@ export function ProjectsSection() {
       tags: ["JavaScript", "React", "OpenWeather API", "CSS3"],
       category: "Frontend & API Integration",
       github: "https://github.com/AmanChauhan264",
-      gradient: "from-emerald-600/30 to-teal-900/40",
-      accent: "text-emerald-400 border-emerald-500/30",
+      gradient: "from-[#1f1005] to-[#151515]",
+      accent: "text-[#FF6B00] border-[#FF8A00]/40",
       codeSnippet: "// OpenWeather API Handler\nasync function fetchWeather(city) {\n  const res = await fetch(`api.weather?q=${city}`);\n  const data = await res.json();\n  return data;\n}"
     },
     {
@@ -33,8 +33,8 @@ export function ProjectsSection() {
       tags: ["Java", "SQL", "DBMS", "Relational DB"],
       category: "Database & Enterprise System",
       github: "https://github.com/AmanChauhan264",
-      gradient: "from-sky-600/30 to-indigo-900/40",
-      accent: "text-sky-400 border-sky-500/30",
+      gradient: "from-[#291607] to-[#151515]",
+      accent: "text-[#FFB066] border-[#FFB066]/40",
       codeSnippet: "-- Order Status Query\nSELECT customer_id, order_status, total_amount\nFROM laundry_orders\nWHERE status = 'PROCESSING'\nORDER BY order_date DESC;"
     },
     {
@@ -43,8 +43,8 @@ export function ProjectsSection() {
       tags: ["C++", "DSA", "OOP", "Algorithms"],
       category: "Algorithmic & OOP Project",
       github: "https://github.com/AmanChauhan264",
-      gradient: "from-purple-600/30 to-slate-900/40",
-      accent: "text-purple-400 border-purple-500/30",
+      gradient: "from-[#1c0f05] to-[#151515]",
+      accent: "text-[#FF8A00] border-[#FF6B00]/40",
       codeSnippet: "// Tournament Bracket Node\nstruct MatchNode {\n  Team teamA, teamB;\n  int scoreA, scoreB;\n  MatchNode* nextRound;\n};"
     },
     {
@@ -53,8 +53,8 @@ export function ProjectsSection() {
       tags: ["Python", "Tkinter", "Algorithms"],
       category: "Desktop GUI App",
       github: "https://github.com/AmanChauhan264",
-      gradient: "from-amber-600/30 to-slate-900/40",
-      accent: "text-amber-400 border-amber-500/30",
+      gradient: "from-[#251406] to-[#151515]",
+      accent: "text-[#FF6B00] border-[#FF8A00]/40",
       codeSnippet: "# Scientific Expression Evaluator\ndef evaluate_expr(expression):\n    result = math_engine.parse(expression)\n    return f'{result:.4f}'"
     }
   ];
@@ -72,12 +72,12 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-slate-700 group flex flex-col justify-between"
+              className="glass-card rounded-3xl overflow-hidden border border-[#292929] hover:border-[#FF6B00]/50 group flex flex-col justify-between"
             >
               {/* Project Header Banner / Code Graphic */}
-              <div className={`relative p-5 bg-gradient-to-br ${project.gradient} border-b border-slate-800/80`}>
+              <div className={`relative p-5 bg-gradient-to-br ${project.gradient} border-b border-[#292929]`}>
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`text-[11px] font-mono font-bold px-2.5 py-1 rounded-full bg-slate-950/80 border ${project.accent}`}>
+                  <span className={`text-[11px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#080808]/90 border ${project.accent}`}>
                     {project.category}
                   </span>
                   <div className="flex space-x-2">
@@ -85,7 +85,7 @@ export function ProjectsSection() {
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-2 rounded-xl bg-slate-950/80 text-slate-300 hover:text-cyan-400 hover:bg-slate-900 transition-colors border border-slate-800"
+                      className="p-2 rounded-xl bg-[#080808] text-[#A3A3A3] hover:text-[#FF6B00] hover:bg-[#1a1a1a] transition-colors border border-[#292929] hover:border-[#FF6B00]/40"
                       aria-label="GitHub Repository"
                     >
                       <GithubIcon size={16} />
@@ -94,30 +94,30 @@ export function ProjectsSection() {
                 </div>
 
                 {/* Code Snippet Preview Graphic */}
-                <div className="bg-slate-950/90 rounded-xl p-3 font-mono text-[11px] text-slate-300 border border-white/5 overflow-x-auto select-none opacity-90 group-hover:opacity-100 transition-opacity">
-                  <pre className="text-slate-400"><code>{project.codeSnippet}</code></pre>
+                <div className="bg-[#080808] rounded-xl p-3 font-mono text-[11px] text-[#A3A3A3] border border-[#292929] overflow-x-auto select-none opacity-90 group-hover:opacity-100 transition-opacity">
+                  <pre className="text-[#A3A3A3]"><code>{project.codeSnippet}</code></pre>
                 </div>
               </div>
 
               {/* Project Info Body */}
               <div className="p-6 flex flex-col flex-grow justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2 font-heading group-hover:text-cyan-300 transition-colors flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#F5F5F5] mb-2 font-heading group-hover:text-[#FF8A00] transition-colors flex items-center justify-between">
                     <span>{project.title}</span>
-                    <FolderGit2 className="w-4 h-4 text-slate-500 shrink-0 ml-2" />
+                    <FolderGit2 className="w-4 h-4 text-[#737373] group-hover:text-[#FF6B00] transition-colors shrink-0 ml-2" />
                   </h3>
 
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  <p className="text-[#A3A3A3] text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>
                 </div>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/60 mt-auto">
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-[#292929] mt-auto">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="text-xs font-mono px-2.5 py-1 bg-slate-900 text-slate-300 rounded-lg border border-slate-800"
+                      className="text-xs font-mono px-2.5 py-1 bg-[#111111] text-[#A3A3A3] rounded-lg border border-[#292929] hover:border-[#FF6B00]/30 hover:text-[#FF8A00] transition-colors"
                     >
                       {tag}
                     </span>
@@ -141,7 +141,7 @@ export function ProjectsSection() {
             href="https://github.com/AmanChauhan264"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 text-cyan-300 font-semibold px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-cyan-500/10 text-sm"
+            className="inline-flex items-center space-x-2 bg-[#111111] hover:bg-[#151515] border border-[#292929] hover:border-[#FF6B00]/40 text-[#FF8A00] hover:text-[#FFB066] font-semibold px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-[#FF6B00]/10 text-sm"
           >
             <GithubIcon size={18} />
             <span>Explore More Repositories on GitHub</span>

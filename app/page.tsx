@@ -42,13 +42,13 @@ export default function Home() {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#030712] text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
+    <main className="relative min-h-screen bg-[#080808] text-[#F5F5F5] selection:bg-[#FF6B00] selection:text-[#080808]">
       <ParticlesBackground />
       <Navbar />
       
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-cyan-400 via-sky-400 to-emerald-400 transform origin-left z-[60]"
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#FF6B00] via-[#FF8A00] to-[#FFB066] transform origin-left z-[60]"
         style={{ scaleX }}
       />
 
@@ -73,7 +73,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-3.5 rounded-2xl bg-slate-900 border border-slate-700 text-cyan-400 shadow-xl shadow-cyan-500/10 hover:border-cyan-500 hover:bg-slate-800 transition-all z-50 hover:-translate-y-1"
+          className="fixed bottom-6 right-6 p-3.5 rounded-2xl bg-[#151515] border border-[#292929] text-[#FF6B00] shadow-xl shadow-[#FF6B00]/10 hover:border-[#FF6B00]/60 hover:bg-[#1a1a1a] hover:text-[#FF8A00] transition-all z-50 hover:-translate-y-1 cursor-pointer"
           aria-label="Back to top"
         >
           <ArrowUp size={20} />
